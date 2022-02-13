@@ -1,47 +1,131 @@
-export default function Home() {
+import React from "react";
+import Contact from "../components/Contact";
+import Environment from "../components/Environment";
+import Activity from "../components/Activity";
+import { ImHeart } from "react-icons/im";
+import { FcElectricalSensor, FcMindMap, FcTimeline } from "react-icons/fc";
+
+export default function Home(props: {
+  setDark: any;
+  overcode: boolean;
+  setOvercode: any;
+}) {
+  const [greeting, setGreeting] = React.useState("{Hi}");
+  const [pulse, setPulse] = React.useState(false);
+  // const [bounce, setBounce] = React.useState(false);
+  props.overcode && console.log("HI, YOU!");
   return (
-    <div>
-      <div className='font-serif text-3xl tracking-wide py-3'>Sarah Fisher, LL.B (Hons), M.A.</div>
-      <div className='gap-8 columns-1 sm:columns-2 xl:columns-3 2xl:columns-4'>
+    <div className='basis-2/3 mt-20 pr-20'>
+      {/* sm:columns-2 xl:columns-3 2xl:columns-4 */}
+      <div>
         <img
           alt='SG Fisher'
-          className='object-contain h-100'
-          src='https://res.cloudinary.com/dowvu52wz/image/upload/v1644682279/schrutefarms/10450077_486252694853282_2481196248747321059_o_ohqaev.jpg'
+          className='my-5 rounded-lg w-28 aspect-square object-cover'
+          src={
+            props.overcode
+              ? "https://res.cloudinary.com/dowvu52wz/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1644682279/schrutefarms/10450077_486252694853282_2481196248747321059_o_ohqaev.jpg"
+              : "https://res.cloudinary.com/dowvu52wz/image/upload/v1644682279/schrutefarms/10450077_486252694853282_2481196248747321059_o_ohqaev.jpg"
+          }
         />
-        <div className="font-sans text-lg">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Reprehenderit, harum quia soluta iusto, qui ex in deleniti deserunt
-          temporibus exercitationem adipisci iure, rerum eum asperiores minus
-          tempora possimus consequuntur numquam dolore molestiae rem similique!
-          Provident modi magnam, tempore ex at libero maxime sed ducimus atque
-          nulla perspiciatis harum eveniet eum dignissimos non facere unde
-          aspernatur veniam. Aut aperiam sapiente quis a corrupti asperiores,
-          laborum voluptatibus quidem quas saepe fugiat repudiandae voluptate
-          soluta ut architecto? Voluptate nemo molestiae nisi ullam enim. Sint
-          illum nostrum inventore, fugit atque quod adipisci unde? Eos rerum
-          nisi impedit maxime dolores ut, accusamus harum sint! Nobis et magni
-          quibusdam nemo at facere corporis quos, voluptatem rerum maiores
-          dolore porro quasi commodi dolorem aliquid tempora nihil ea ex
-          voluptas ipsam. Ducimus cum sunt iure dicta commodi ratione, earum,
-          eveniet recusandae officiis quod atque tempore repudiandae perferendis
-          enim ipsum, animi illo! Quas eum iure debitis quia, neque expedita sit
-          voluptate rem illum minus architecto porro dolor fugit! Quam suscipit
-          autem ab, veritatis facere, doloribus distinctio velit id sed ducimus
-          cum repellat quasi odio quaerat corporis tempora impedit laborum amet?
-          Magnam ratione quidem veniam aspernatur accusantium sint facere dicta
-          error facilis? Itaque aperiam dicta consequatur dolores eos nostrum,
-          aliquam ipsum accusamus ut mollitia suscipit, possimus placeat nulla.
-          Reiciendis voluptatem doloremque voluptas! Quae facere sed aliquid!
-          Consectetur ullam natus earum voluptate dignissimos necessitatibus,
-          hic cumque aut esse dolorem laborum cupiditate officia perspiciatis
-          voluptatibus facilis doloremque illo fugiat. Iste mollitia accusamus,
-          temporibus provident consectetur, perferendis nam eos repellendus,
-          optio non veniam! Cumque, architecto sapiente. Quia error distinctio
-          amet velit ullam sint rem veniam sapiente. Est iste error, nam
-          repellendus facere beatae nisi voluptatem illum itaque quos! Deleniti
-          provident consequatur delectus qui quaerat. Fugit illo consequuntur
-          excepturi harum voluptas nobis mollitia eaque reiciendis, quia cumque
-          sint ullam modi quasi deleniti ab ut?
+        <div className='my-5 font-mono font-medium text-xl tracking-wide antialiased'>
+          <p>
+            <span
+              className={`text-2xl ${
+                greeting === "Hi"
+                  ? "text-blue-200 dark:text-blue-200"
+                  : greeting === "Helo"
+                  ? "text-green-300 dark:text-green-300"
+                  : greeting === "Hej"
+                  ? "text-red-300 dark:text-red-300"
+                  : "text-neutral-300 dark:text-neutral-300"
+              } dark:text-slate-400`}>
+              {greeting},
+            </span>{" "}
+            I'm Sarah Fisher,
+          </p>
+          <p>
+            Born in{" "}
+            <button
+              onMouseOver={(e) => setGreeting("Hi")}
+              className='text-blue-200 hover:text-blue-400 rounded border-4 border-white dark:border-slate-900 dark:hover:border-slate-800'>
+              {"{Oregon}"}
+            </button>
+            , raised in{" "}
+            <button
+              onMouseOver={(e) => setGreeting("Helo")}
+              className='text-green-300 hover:text-green-500 rounded border-4 border-white dark:border-slate-900 dark:hover:border-slate-800'>
+              {"{Wales}"}
+            </button>
+            , &amp; lived in{" "}
+            <button
+              onMouseOver={(e) => setGreeting("Hej")}
+              className='text-red-300 hover:text-red-500 rounded border-4 border-white dark:border-slate-900 dark:hover:border-slate-800'>
+              {"{Denmark}"}
+            </button>
+            .
+          </p>
+        </div>
+        {/* <img
+          onMouseOver={(e) => setBounce(true)}
+          onMouseLeave={(e) => setBounce(false)}
+          alt='Coffee pot'
+          src='https://res.cloudinary.com/dowvu52wz/image/upload/v1644761561/schrutefarms/icons/42_zzkwby.png'
+          className={`invisible h-32 float-right pl-2 ${
+            bounce && "animate-bounce"
+          }`}
+        /> */}
+        <div className='py-8'>
+          <p className='font-mono font-medium text-3xl tracking-wide antialiased'>
+            I am a{" "}
+            <button
+              onMouseOver={(e) => {
+                props.setOvercode(true);
+              }}
+              onMouseLeave={(e) => {
+                props.setOvercode(false);
+              }}
+              className='font-medium rounded border-4 border-white px-1 dark:border-slate-900 dark:hover:border-slate-800'>
+              {"{fullstack developer}"}
+            </button>
+          </p>
+          <p className='font-mono font-medium text-xl tracking-wide antialiased'>
+            driven by coffee, a love for patterns &amp; technology. I{" "}
+            <ImHeart
+              onMouseOver={(e) => setPulse(true)}
+              onMouseLeave={(e) => setPulse(false)}
+              className={`text-red-300 dark:text-red-500 inline ${
+                pulse && "animate-ping"
+              }`}
+            />{" "}
+            my job &amp; would like to{" "}
+            <a href='#contact'>
+              <button className='font-medium px-1 rounded border-4 border-white dark:border-slate-900 hover:underline underline-offset-4 decoration-4 text-blue-600'>
+                {"{make connections}"}
+              </button>
+              .
+            </a>
+          </p>
+        </div>
+        <div className='py-8'>
+          <p className='my-5 font-mono font-medium text-xl tracking-wide antialiased'>
+            <FcMindMap className='inline mr-2 text-5xl' />
+            What makes my work possible?
+          </p>
+          <Environment />
+        </div>
+        <div className='py-8' id='contact'>
+          <p className='my-5 font-mono font-medium text-xl tracking-wide antialiased'>
+            <FcTimeline className='inline mr-2 text-5xl' />
+            Let's be online friends!
+          </p>
+          <Contact />
+        </div>
+        <div className='py-8'>
+          <p className='my-5 font-mono font-medium text-xl tracking-wide antialiased'>
+            <FcElectricalSensor className='inline mr-2 text-5xl' />
+            What have I been up to recently?
+          </p>
+          <Activity />
         </div>
       </div>
     </div>

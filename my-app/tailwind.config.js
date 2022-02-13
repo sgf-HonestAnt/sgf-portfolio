@@ -12,6 +12,12 @@ module.exports = {
         "2xl": "6rem",
       },
     },
+    fontFamily: {
+      mono: ['"Fira Code"', "ui-monospace"],
+    },
+    borderRadius: {
+      lg: "10px",
+    },
   },
   plugins: [
     require("@tailwindcss/typography"),
