@@ -16,7 +16,7 @@ export default function Home(props: {
   props.overcode && console.log("HI, YOU!");
   // console.log(greeting);
   return (
-    <div className='basis-2/3 mt-20 pr-20'>
+    <div className='basis-2/3 mt-20 pr-10 xl:pr-20'>
       {/* sm:columns-2 xl:columns-3 2xl:columns-4 */}
       <div>
         <img
@@ -39,7 +39,7 @@ export default function Home(props: {
                   : greeting === "Hej"
                   ? "text-red-300 dark:text-red-300"
                   : "text-neutral-300 dark:text-neutral-300"
-              } dark:text-slate-400`}>
+              }`}>
               {greeting},
             </span>{" "}
             I'm Sarah Fisher,
@@ -77,7 +77,8 @@ export default function Home(props: {
         /> */}
         <div className='py-8'>
           <p className='font-mono font-medium text-3xl tracking-wide antialiased'>
-            I am a{" "}
+            I am a
+            <br />
             <button
               onMouseOver={(e) => {
                 props.setOvercode(true);
@@ -85,12 +86,12 @@ export default function Home(props: {
               onMouseLeave={(e) => {
                 props.setOvercode(false);
               }}
-              className='font-medium rounded border-4 border-white px-1 dark:border-slate-900 dark:hover:border-slate-800'>
+              className='font-medium text-left rounded border-4 border-white px-1 dark:border-slate-900 dark:hover:border-slate-800'>
               {"{fullstack developer}"}
             </button>
           </p>
           <p className='font-mono font-medium text-xl tracking-wide antialiased'>
-            driven by coffee, a love for patterns &amp; technology. I{" "}
+            driven by coffee, a love for patterns &amp; technology. <br />I{" "}
             <ImHeart
               onMouseOver={(e) => setPulse(true)}
               onMouseLeave={(e) => setPulse(false)}

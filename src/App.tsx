@@ -9,7 +9,7 @@ function App() {
   // console.log(dark, overcode)
   return (
     <div className={`container-full ${dark && "dark"}`}>
-      <div className='relative flex flex-row px-20 dark:bg-slate-900 bg-white dark:text-neutral-100 text-slate-800'>
+      <div className='relative flex flex-row px-10 md:px-20 dark:bg-slate-900 bg-white dark:text-neutral-100 text-slate-800'>
         <Home setDark={setDark} overcode={overcode} setOvercode={setOvercode} />
         <Nav dark={dark} setDark={setDark} overcode={overcode} />
       </div>

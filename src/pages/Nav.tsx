@@ -5,7 +5,7 @@ export default function Nav(props: {
 }) {
   return (
     <div
-      className={`basis-1/3 relative mt-20 p-5 ${
+      className={`hidden lg:inline basis-1/3 relative mt-20 p-5 ${
         props.overcode &&
         "bg-[url('https://res.cloudinary.com/dowvu52wz/image/upload/v1644771238/schrutefarms/bg/photo-1533709752211-118fcaf03312_smymtd.jpg')] bg-auto bg-no-repeat"
       }`}>
