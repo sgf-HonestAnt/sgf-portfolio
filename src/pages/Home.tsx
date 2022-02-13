@@ -10,7 +10,7 @@ export default function Home(props: {
   overcode: boolean;
   setOvercode: any;
 }) {
-  const [greeting, setGreeting] = React.useState("{Hi}");
+  const [greeting, setGreeting] = React.useState("Hello,");
   const [pulse, setPulse] = React.useState(false);
   // const [bounce, setBounce] = React.useState(false);
   props.overcode && console.log("HI, YOU!");
@@ -31,35 +31,35 @@ export default function Home(props: {
         <div className='my-5 font-mono font-medium text-xl tracking-wide antialiased'>
           <p>
             <span
-              className={`text-2xl ${
-                greeting === "Hi"
-                  ? "text-blue-200 dark:text-blue-200"
-                  : greeting === "Helo"
-                  ? "text-green-300 dark:text-green-300"
-                  : greeting === "Hej"
-                  ? "text-red-300 dark:text-red-300"
-                  : "text-neutral-300 dark:text-neutral-300"
+              className={`${
+                greeting === "Hi,"
+                  ? "text-2xl text-blue-200 dark:text-blue-200"
+                  : greeting === "Helo,"
+                  ? "text-2xl text-green-300 dark:text-green-300"
+                  : greeting === "Hej,"
+                  ? "text-2xl text-red-300 dark:text-red-300"
+                  : "text-xl text-neutral-300 dark:text-neutral-300"
               }`}>
-              {greeting},
+              {greeting}
             </span>{" "}
             I'm Sarah Fisher,
           </p>
           <p>
             Born in{" "}
             <button
-              onMouseOver={(e) => setGreeting("Hi")}
+              onMouseOver={(e) => setGreeting("Hi,")}
               className='text-blue-200 hover:text-blue-400 rounded border-4 border-white dark:border-slate-900 dark:hover:border-slate-800'>
               {"{Oregon}"}
             </button>
             , raised in{" "}
             <button
-              onMouseOver={(e) => setGreeting("Helo")}
+              onMouseOver={(e) => setGreeting("Helo,")}
               className='text-green-300 hover:text-green-500 rounded border-4 border-white dark:border-slate-900 dark:hover:border-slate-800'>
               {"{Wales}"}
             </button>
             , &amp; lived in{" "}
             <button
-              onMouseOver={(e) => setGreeting("Hej")}
+              onMouseOver={(e) => setGreeting("Hej,")}
               className='text-red-300 hover:text-red-500 rounded border-4 border-white dark:border-slate-900 dark:hover:border-slate-800'>
               {"{Denmark}"}
             </button>
@@ -101,7 +101,7 @@ export default function Home(props: {
             />{" "}
             my job &amp; would like to{" "}
             <a href='#contact'>
-              <button className='font-medium px-1 rounded border-4 border-white dark:border-slate-900 hover:underline underline-offset-4 decoration-4 text-blue-600'>
+              <button className='font-medium text-left px-1 rounded border-4 border-white dark:border-slate-900 hover:underline underline-offset-4 decoration-4 text-blue-600'>
                 {"{make connections}"}
               </button>
               .

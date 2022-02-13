@@ -4,7 +4,7 @@ export default function Activity() {
   return (
     <ul className='list-none my-5 font-mono font-medium text-lg tracking-wide antialiased'>
       <li>
-        <AiOutlineMinus className='inline' /> Bamboo App:
+        <AiOutlineMinus className='inline' /> Bamboo App 21-22:
         <br />
         <img
           src='https://bamboo-fe.vercel.app/static/media/Bamboo1.db9b6e72e71f07451c56681d65aa0191.svg'
