@@ -14,7 +14,7 @@ export default function Home(props: {
   const [pulse, setPulse] = React.useState(false);
   // const [bounce, setBounce] = React.useState(false);
   props.overcode && console.log("HI, YOU!");
-  console.log(greeting);
+  // console.log(greeting);
   return (
     <div className='basis-2/3 mt-20 pr-20'>
       {/* sm:columns-2 xl:columns-3 2xl:columns-4 */}
