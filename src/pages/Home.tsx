@@ -4,6 +4,7 @@ import Environment from "../components/Environment";
 import Activity from "../components/Activity";
 import { ImHeart } from "react-icons/im";
 import { FcElectricalSensor, FcMindMap, FcTimeline } from "react-icons/fc";
+import { Link } from "react-router-dom";
 
 export default function Home(props: {
   setDark: any;
@@ -79,16 +80,21 @@ export default function Home(props: {
           <p className='font-mono font-medium text-3xl tracking-wide antialiased'>
             I am a
             <br />
-            <button
-              onMouseOver={(e) => {
-                props.setOvercode(true);
-              }}
-              onMouseLeave={(e) => {
-                props.setOvercode(false);
-              }}
-              className='font-medium text-left rounded border-4 border-white px-1 dark:border-slate-900 dark:hover:border-slate-800'>
-              {"{fullstack developer}"}
-            </button>
+            <a
+              href='https://github.com/sgf-HonestAnt'
+              target='_blank'
+              rel='noreferrer'>
+              <button
+                // onMouseOver={(e) => {
+                //   props.setOvercode(true);
+                // }}
+                // onMouseLeave={(e) => {
+                //   props.setOvercode(false);
+                // }}
+                className='font-medium text-left rounded border-4 border-white px-1 dark:border-slate-900 dark:hover:border-slate-800'>
+                {"{fullstack developer}"}
+              </button>
+            </a>
           </p>
           <p className='font-mono font-medium text-xl tracking-wide antialiased'>
             driven by coffee, a love for patterns &amp; technology. <br />I{" "}
