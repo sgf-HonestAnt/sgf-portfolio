@@ -4,7 +4,6 @@ import Environment from "../components/Environment";
 import Activity from "../components/Activity";
 import { ImHeart } from "react-icons/im";
 import { FcElectricalSensor, FcMindMap, FcTimeline } from "react-icons/fc";
-import { Link } from "react-router-dom";
 
 export default function Home(props: {
   setDark: any;
@@ -91,7 +90,7 @@ export default function Home(props: {
                 // onMouseLeave={(e) => {
                 //   props.setOvercode(false);
                 // }}
-                className='font-medium text-left rounded border-4 border-white px-1 dark:border-slate-900 dark:hover:border-slate-800'>
+                className='font-medium text-left rounded border-4 border-white px-1 dark:border-slate-900 dark:hover:border-slate-900 hover:underline underline-offset-4 decoration-4 text-blue-600'>
                 {"{fullstack developer}"}
               </button>
             </a>
