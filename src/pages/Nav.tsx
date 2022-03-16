@@ -33,33 +33,38 @@ export default function Nav(props: {
           Sarah Fisher, LL.B (Hons), M.A.
         </p>
         <p className='px-5 pt-5 font-mono font-normal text-xl tracking-wide antialiased'>
-          <a href="https://portfolio-sgf-honestant.vercel.app/media/SarahFisherCVMarch2020.pdf" download>
-            <FiFileText />
+          <a
+            href='https://portfolio-sgf-honestant.vercel.app/media/SarahFisherCVMarch2020.pdf'
+            download>
+            <FiFileText className="inline" />{" "}
             View my latest CV
           </a>
         </p>
         <p className='px-5 pt-5 font-mono font-normal text-xl tracking-wide antialiased'>
           <a href='mailto:sgfishercardiff@gmail.com'>
-            <FiMail />
-            sgfishercardiff@gmail.com
+            <FiMail className="inline" />{" "}
+            Email me
           </a>
         </p>
         <p className='px-5 pt-5 font-mono font-normal text-xl tracking-wide antialiased'>
+          Or find me:
+        </p>
+        <p className='px-5 font-mono font-normal text-xl tracking-wide antialiased'>
           <a
             href='https://github.com/sgf-HonestAnt'
             target='_blank'
             rel='noreferrer'>
-            <FiGithub />
-            github.com/sgf-HonestAnt
-          </a>{" "}
+            <FiGithub className="inline" />{" "}
+            github
+          </a>
         </p>
-        <p className='p-5 font-mono font-normal text-xl tracking-wide antialiased'>
+        <p className='px-5 pb-5 font-mono font-normal text-xl tracking-wide antialiased'>
           <a
             href='https://www.linkedin.com/in/sarah-guinevere-fisher-0073b316b/'
             target='_blank'
             rel='noreferrer'>
-            <FiLinkedin />
-            linkedin.com/in/sarah-guinevere-fisher-0073b316b/
+            <FiLinkedin className="inline"/>{" "}
+            linkedin
           </a>
         </p>
       </div>
