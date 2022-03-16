@@ -35,7 +35,7 @@ export default function Nav(props: {
         <p className='px-5 pt-5 font-mono font-normal text-xl tracking-wide antialiased'>
           <a href="https://portfolio-sgf-honestant.vercel.app/media/SarahFisherCVMarch2020.pdf" download>
             <FiFileText />
-            Download my latest CV
+            View my latest CV
           </a>
         </p>
         <p className='px-5 pt-5 font-mono font-normal text-xl tracking-wide antialiased'>
