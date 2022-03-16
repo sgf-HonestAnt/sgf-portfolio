@@ -1,3 +1,5 @@
+import { FiFileText, FiGithub, FiMail, FiLinkedin } from "react-icons/fi";
+
 export default function Nav(props: {
   dark: boolean;
   setDark: any;
@@ -31,7 +33,14 @@ export default function Nav(props: {
           Sarah Fisher, LL.B (Hons), M.A.
         </p>
         <p className='px-5 pt-5 font-mono font-normal text-xl tracking-wide antialiased'>
+          <a href="https://portfolio-sgf-honestant.vercel.app/media/SarahFisherCVMarch2020.pdf" download>
+            <FiFileText />
+            Download my latest CV
+          </a>
+        </p>
+        <p className='px-5 pt-5 font-mono font-normal text-xl tracking-wide antialiased'>
           <a href='mailto:sgfishercardiff@gmail.com'>
+            <FiMail />
             sgfishercardiff@gmail.com
           </a>
         </p>
@@ -40,6 +49,7 @@ export default function Nav(props: {
             href='https://github.com/sgf-HonestAnt'
             target='_blank'
             rel='noreferrer'>
+            <FiGithub />
             github.com/sgf-HonestAnt
           </a>{" "}
         </p>
@@ -48,6 +58,7 @@ export default function Nav(props: {
             href='https://www.linkedin.com/in/sarah-guinevere-fisher-0073b316b/'
             target='_blank'
             rel='noreferrer'>
+            <FiLinkedin />
             linkedin.com/in/sarah-guinevere-fisher-0073b316b/
           </a>
         </p>

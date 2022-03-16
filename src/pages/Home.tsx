@@ -96,7 +96,7 @@ export default function Home(props: {
             </a>
           </p>
           <p className='font-mono font-medium text-xl tracking-wide antialiased'>
-            driven by coffee, a love for patterns &amp; technology. <br />I{" "}
+            driven by coffee ☕, a love for patterns 🌸🌹🌸🌹  &amp; technology. <br />I{" "}
             <ImHeart
               onMouseOver={(e) => setPulse(true)}
               onMouseLeave={(e) => setPulse(false)}
@@ -107,7 +107,7 @@ export default function Home(props: {
             my job &amp; would like to{" "}
             <a href='#contact'>
               <button className='font-medium text-left px-1 rounded border-4 border-white dark:border-slate-900 hover:underline underline-offset-4 decoration-4 text-blue-600'>
-                {"{make connections}"}
+                {"{make connections}"} 🤝
               </button>
               .
             </a>
