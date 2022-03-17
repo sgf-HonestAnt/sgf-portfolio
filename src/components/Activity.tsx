@@ -28,7 +28,16 @@ export default function Activity() {
           @Strive
         </a>
         , I built a fully functional task management app with a front-end
-        written in TypeScript and a back-end powered by MongoDB.
+        written in TypeScript and a back-end powered by MongoDB. You can watch me
+        demonstrate it here:
+        <br />
+        <a href='https://youtu.be/wH4G0BhBfBA?t=894'>
+          <img
+            src='https://user-images.githubusercontent.com/82496944/158368842-e299f23c-7d0b-45d6-a95d-3ec34366521e.png'
+            alt='SOLO CAPSTONE DEMO DAY'
+            width='240'
+          />
+        </a>
       </li>
       <li>
         <AiOutlineMinus className='inline' /> Tutor 21-22:
